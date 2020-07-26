@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  @apply antialiased text-cus-black;
+}
+
+button {
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+.emoji {
+  height: 1.2em;
+}
+
+.bright-80 {
+  filter: brightness(80%);
+}
