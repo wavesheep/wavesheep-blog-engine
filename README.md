@@ -11,6 +11,8 @@ wavesheep-blog-engine 是我个人博客的生成系统，它只能生成我预�
 
 ![](./snapshot.png)
 
+项目当前并没有引入很多插件，仅提供了mathjax数学公式和emoji支持，如果有其它需求你可以fork这个项目自由添加。
+
 ## 怎么用？
 
 ### data文件夹
@@ -78,14 +80,18 @@ export default {
   vssue: { // 评论系统配置, 具体操作见https://vssue.js.org/zh/guide/github.html#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84-oauth-app
     owner: '',
     repo: '',
-    clientId: '',
+    clientId: '', 
     clientSecret: ''
   }
 }
 
 ```
 
-更真实的配置可以参考[data文件夹Demo](https://github.com/wavesheep/wavesheep-blog-demo)，在这个demo里也提供了适用于自有服务器部署service worker。
+这个文件夹下两个特殊的文件`about.md`和`portfolid.md`分别用于构建about和portfolid页面。
+
+需要说明的是你可以在markdown里添加html，并且你可以使用`tailwind-css`的工具类，但是我不能保证一定生效，很多项目没用到的工具类已经被purge掉了。
+
+更直观的配置可以参考[这个demo](https://github.com/wavesheep/wavesheep-blog-demo)， demo去掉了vssue配置部分敏感信息。
 
 ## 本地生成
 
