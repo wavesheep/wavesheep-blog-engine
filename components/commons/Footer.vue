@@ -65,7 +65,7 @@
         <span v-if="beian && beian.gongan">|</span>
         <a
           class="shadow-link"
-          v-if="beian && beian.icp"
+          v-if="beian && beian.gongan"
           :href="'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode='+beian.gongan.code"
           target="_blank"
         >{{ beian.gongan.name }}</a>
