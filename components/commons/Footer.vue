@@ -60,6 +60,7 @@
           class="shadow-link"
           v-if="beian && beian.icp"
           href="http://www.beian.miit.gov.cn"
+          rel="noopener"
           target="_blank"
         >{{ beian.icp }}</a>
         <span v-if="beian && beian.gongan">|</span>
@@ -67,6 +68,7 @@
           class="shadow-link"
           v-if="beian && beian.gongan"
           :href="'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode='+beian.gongan.code"
+          rel="noopener"
           target="_blank"
         >{{ beian.gongan.name }}</a>
         <br />
@@ -75,6 +77,7 @@
         Powered By
         <a
           class="shadow-link"
+          rel="noopener"
           target="_blank"
           href="https://github.com/wavesheep/wavesheep-blog-engine"
         >Wavesheep Blog Engine</a>
