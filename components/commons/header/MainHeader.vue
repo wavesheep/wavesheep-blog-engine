@@ -6,7 +6,8 @@
     <img
       :src="config[currentPath].img"
       alt="head image"
-      class="object-cover max-h-full w-full bright-80"
+      class="object-cover h-56 w-full bright-80"
+      :class="{ 'md:h-96': currentPath !== 'archive'}"
     />
     <div class="absolute inset-0 m-auto h-24 md:h-32">
       <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">{{ config[currentPath].title }}</h1>

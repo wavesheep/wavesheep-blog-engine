@@ -8,7 +8,7 @@
     <img
       :src="post.meta.background"
       alt="post head image"
-      class="object-cover max-h-full w-full bright-80"
+      class="object-cover h-96 w-full bright-80"
       v-if="!!post.meta.background"
     />
     <div class="absolute inset-0 m-auto h-32 md:h-40 w-8/12">

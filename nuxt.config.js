@@ -51,10 +51,8 @@ export default {
       src: "/js/baidu-analytics.js",
       type: "module"
     }, {
-      async :true,
       src: "/js/snackbar.js"
     }, {
-      async :true,
       src: "/js/sw-register.js",
     }],
   },
