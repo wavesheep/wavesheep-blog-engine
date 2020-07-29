@@ -21,7 +21,7 @@
       <h2 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">{{ post.meta.subtitle }}</h2>
       <p
         class="font-serif text-base italic md:text-lg lg:text-xl xl:text-2xl"
-      >Posted by {{ post.meta.author }} on {{post.meta.date | formatDate}}</p>
+      >Posted by {{ post.meta.author }} on {{ formatedDate }}</p>
     </div>
   </header>
 </template>
@@ -29,36 +29,20 @@
 <script lang="ts">
 import { defineComponent } from "@vue/composition-api";
 import { Post } from "@/types/post";
+import useFormatDate from '@/hooks/useFormatDate';
 
 export default defineComponent({
   name: "PostHeader",
   props: {
-    post: Object as () => Post[],
+    post: Object as () => Post,
   },
-  filters: {
-    formatDate(dateStr: string) {
-      const date = new Date(dateStr);
-      const monthArr = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
-      const year = date.getFullYear();
-      const month = monthArr[date.getMonth()];
-      const day = date.getDate();
+  setup(props) {
+    const formatedDate = useFormatDate(props.post?.meta.date);
 
-      return month + " " + day + ", " + year;
-    },
-  },
+    return {
+      formatedDate
+    }
+  }
 });
 </script>
 <style lang="postcss">
