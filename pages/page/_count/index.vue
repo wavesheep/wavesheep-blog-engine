@@ -43,10 +43,17 @@ export default defineComponent({
         (p) => p.filename !== "about.md" && p.filename !== "portfolid.md"
       );
       const count = Number.parseInt(route.params.count);
+      let tags = new Set<string>();
+      posts.forEach((post) => {
+        post.meta.tags?.forEach((tag) => {
+          tags.add(tag);
+        });
+      });
       return {
         posts: posts.slice((count - 1) * 5, count * 5),
         nextPage: posts[count * 5] ? "/page/" + (count + 1) : "",
         prevPage: count === 2 ? "/" : "/page/" + (count - 1),
+        tags
       };
     }
   },
