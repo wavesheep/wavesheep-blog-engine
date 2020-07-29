@@ -43,14 +43,18 @@ export default {
       href: '/css/snackbar.css'
     }],
     script: [{
+      async :true,
       src: "/js/google-analytics.js",
       type: "module"
     }, {
+      async :true,
       src: "/js/baidu-analytics.js",
       type: "module"
     }, {
+      async :true,
       src: "/js/snackbar.js"
     }, {
+      async :true,
       src: "/js/sw-register.js",
     }],
   },

@@ -37,14 +37,6 @@ export default defineComponent({
     PostPreview,
     PageNav,
   },
-  head: {
-    script: [
-      {
-        async: true,
-        src: "//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
-      }
-    ],
-  },
   asyncData() {
     if (process.server) {
       const data = require("../utils/data");
