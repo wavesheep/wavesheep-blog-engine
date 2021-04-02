@@ -1,7 +1,7 @@
 wavesheep-blog-engine
 ================================
 
-[Live Demo](https://blog.wavesheep.xyz)
+[Live Demo](https://blog.wavesheep.net)
 
 ## 是什么？
 
